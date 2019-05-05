@@ -41,11 +41,11 @@
     <dependencyManagement>
         <dependencies>
 
-            <dependency>
+<!--             <dependency>
                 <groupId>org.keycloak</groupId>
                 <artifactId>keycloak-testsuite-utils</artifactId>
                 <version>${keycloak.version}</version>
-            </dependency>
+            </dependency> -->
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
