@@ -103,9 +103,9 @@
             <version>${project.version}</version>
         </dependency>
 
-        <dependency>
+<!--         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-testsuite-utils</artifactId>
-        </dependency>
+        </dependency> -->
     </dependencies>
 </project>
