@@ -134,16 +134,6 @@ public class SelectUserAuthenticatorForm extends AbstractIdentityFirstUsernameFo
         context.getEvent().detail(Details.USERNAME, username);
         context.getAuthenticationSession().setAuthNote(AbstractUsernameFormAuthenticator.ATTEMPTED_USERNAME, username);
 
-        UserModel user = lookupUser(context, username);
-
-        if (invalidUser(context, user)) {
-            return false;
-        }
-
-        if (!enabledUser(context, user)) {
-            return false;
-        }
-
         String rememberMe = inputData.getFirst("rememberMe");
         boolean remember = rememberMe != null && rememberMe.equalsIgnoreCase("on");
         if (remember) {
@@ -152,7 +142,7 @@ public class SelectUserAuthenticatorForm extends AbstractIdentityFirstUsernameFo
         } else {
             context.getAuthenticationSession().removeAuthNote(Details.REMEMBER_ME);
         }
-        context.setUser(user);
+
         return true;
     }
 
